@@ -6,11 +6,10 @@ import Form from './components/Form';
 
 function App() {
   const [nameValue, setNameValue] = useState('');
-  const [person, setPerson] = useState([]);
+  const [persons, setPersons] = useState([]);
 
   const handleAddItem = (newPerson) => {
-    setItems((prev) => [...prev, newPerson]);
-    console.log(items)
+    setPersons((prev) => [...prev, newPerson]);
   };
 
   return (
