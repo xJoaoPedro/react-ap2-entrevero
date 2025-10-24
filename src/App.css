@@ -3,6 +3,11 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  border-radius: 100px;
+}
+
+body {
+  background-color: #646cffaa;
 }
 
 .logo {
@@ -39,4 +44,10 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.glass-effect {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
