@@ -3,6 +3,7 @@ import logo from './assets/computacaoulbra.jpeg'
 import './App.css'
 import Address from './components/Address'
 import Form from './components/Form';
+import PersonCard from './components/PersonCard';
 
 function App() {
   const [nameValue, setNameValue] = useState('');
@@ -63,7 +64,9 @@ function App() {
               Usuários Cadastrados
             </h3>
             <div className="text-white/70 h-96 flex items-center justify-center">
-              (Componente de Lista de Usuários aqui)
+              {persons.map((p, index) => (
+                <PersonCard key={index} person={p} />
+              ))}
             </div>
           </section>
 
