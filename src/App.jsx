@@ -2,9 +2,16 @@ import { useState } from 'react'
 import logo from './assets/computacaoulbra.jpeg'
 import './App.css'
 import Address from './components/Address'
+import Form from './components/Form';
 
 function App() {
   const [nameValue, setNameValue] = useState('');
+  const [person, setPerson] = useState([]);
+
+  const handleAddItem = (newPerson) => {
+    setItems((prev) => [...prev, newPerson]);
+    console.log(items)
+  };
 
   return (
     <>
@@ -22,7 +29,9 @@ function App() {
         <section>
           <Address />
         </section>
-        <section></section>
+        <section>
+          <Form onAddItem={handleAddItem}></Form>
+        </section>
         <section></section>
       </main>
     </>
