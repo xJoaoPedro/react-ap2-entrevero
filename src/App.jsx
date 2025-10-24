@@ -3,6 +3,7 @@ import logo from './assets/computacaoulbra.jpeg'
 import './App.css'
 import Address from './components/Address'
 import Form from './components/Form';
+import PersonCard from './components/PersonCard';
 
 function App() {
   const [nameValue, setNameValue] = useState('');
@@ -31,7 +32,11 @@ function App() {
         <section>
           <Form onAddItem={handleAddItem}></Form>
         </section>
-        <section></section>
+        <section>
+          {persons.map((p, index) => (
+            <PersonCard key={index} person={p} />
+          ))}
+        </section>
       </main>
     </>
   )
