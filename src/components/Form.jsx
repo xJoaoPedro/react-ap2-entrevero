@@ -91,7 +91,7 @@ export default function Form({ onAddItem }) {
                             px-6 py-2 rounded-full cursor-pointer transition duration-200 
                             text-sm font-semibold shadow-md 
                             ${person.isGuest === true
-                                    ? 'bg-[#355b8c] text-white shadow-[#355b8c]/50'
+                                    ? 'bg-green-600 text-white shadow-[#355b8c]/50'
                                     : 'bg-white/10 text-white hover:bg-white/30'}
                         `}>
                                 Sim
